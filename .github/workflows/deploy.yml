@@ -35,12 +35,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-          # Se eliminó cache-dependency-path para evitar errores si no existe package-lock.json
+          # HEMOS ELIMINADO LA LÍNEA "cache: 'npm'"
+          # Esto evita que el proceso falle buscando el package-lock.json
 
-      # CAMBIO IMPORTANTE: Usamos 'npm install' en lugar de 'npm ci'
-      # 'npm install' genera el package-lock.json si no existe.
       - name: Install dependencies
+        # Usamos 'npm install' que genera el lockfile al vuelo si no existe
         run: npm install
 
       - name: Build
