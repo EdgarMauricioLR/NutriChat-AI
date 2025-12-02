@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // IMPORTANTE: Esta línea le dice a la app que vive en esta subcarpeta en GitHub
-  base: '/NutriChatAITest/', 
+  base: '/NutriChat-AI/', 
 })
